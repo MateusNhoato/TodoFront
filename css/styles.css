@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    border:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #5c5959;
+}
+
+button{
+    background-color: #5c5959;
+    transition: 0.3s;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #fff;
+    border: 0.3em solid springgreen;
+    border-bottom-left-radius: 10%; 
+    border-bottom-right-radius: 10%; 
+}
+
+
+
+
+#novo-todo-container{
+    align-items: center;
+    margin: 2em 40%;
+    width: 50%;
+    height: auto;
+}
+
+#novo-todo-container form label{
+    align-self: flex-end;
+    width: 50%;
+    font-size: 1.2em;
+}
+
+#novo-todo-container form input{
+    width: 50%;
+}
+
+#novo-todo-container #novo-todo{
+    align-self: flex-end;
+}
+
+#novo-todo-container #add-button {
+    margin: 0.3em 25%;
+    border: none;
+    border-radius: 15%;
+    transition: 0.3s;
+}
+
+#novo-todo-container #add-button:hover{
+   box-shadow: 1px 1px 1px solid #fff;
+}
+
+#novo-todo-container #add-button :active{
+    box-shadow: 0 2px goldenrod;
+    transform: translateY(5px);
+}
+
+/* todos */
+#todos-container{
+    position: relative;
+    inset: 15% 20%;
+    width: 50%;
+    height: fit-content;
+}
+
+.todo-container{
+    display: flex;
+    flex-flow:row wrap;
+    text-align: center;
+    margin: 1em 0em;
+    row-gap: 0.5em;
+    justify-content: center;
+    border:2px solid #000;
+    box-shadow:0px 2px 2px #fff;
+    border-radius: 25%;
+}
+
+.todo-container h3{
+    font:bold;
+    font-size: 2em;
+    color:#fff;
+    text-shadow: 3px 1px 1px black;
+}
+
