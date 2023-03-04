@@ -9,7 +9,6 @@ body{
 }
 
 button{
-    background-color: #5c5959;
     transition: 0.3s;
 }
 
@@ -17,37 +16,69 @@ header{
     width: 100%;
     height: auto;
     text-align: center;
-    background-color: #fff;
-    border: 0.3em solid springgreen;
+    background-color: #000;
+    color:#fff;
+    border: none;
     border-bottom-left-radius: 10%; 
     border-bottom-right-radius: 10%; 
+    margin-bottom: 2em;
 }
-
-
 
 
 #novo-todo-container{
+    display: grid;
+    position: relative;
+    inset: 15% 20%;
     align-items: center;
-    margin: 2em 40%;
+    justify-content: center;
     width: 50%;
     height: auto;
+    grid-template-areas: 
+    "adicionar adicionar adicionar"
+    "todo todoInput todoInput"
+    "descricao descricaoInput descricaoInput"
+    "1fr botaoadd  botaoedit"
+    ;
+    row-gap: 5px;
+}
+#novo-todo-container h2{
+    text-align: center;
+    grid-area: adicionar;
 }
 
-#novo-todo-container form label{
-    align-self: flex-end;
-    width: 50%;
-    font-size: 1.2em;
+#novo-todo-label{
+    grid-area: todo;
 }
 
-#novo-todo-container form input{
-    width: 50%;
+#novo-todo{
+    grid-area: todoInput;
 }
 
-#novo-todo-container #novo-todo{
-    align-self: flex-end;
+#descricao-label{
+    grid-area: descricao;
+
 }
 
-#novo-todo-container #add-button {
+#descricao{
+    grid-area: descricaoInput;
+}
+
+#add-button{
+    grid-area: botaoadd;
+}
+
+#edit-button{
+    grid-area: botaoedit;
+}
+
+
+#novo-todo-container form{
+    display: flexbox;
+}
+
+
+#novo-todo-container button {
+    background-color: #5c5959;
     margin: 0.3em 25%;
     border: none;
     border-radius: 15%;
@@ -72,16 +103,52 @@ header{
 }
 
 .todo-container{
-    display: flex;
-    flex-flow:row wrap;
-    text-align: center;
+    background-color: #707070;
+    display: grid;
     margin: 1em 0em;
     row-gap: 0.5em;
-    justify-content: center;
-    border:2px solid #000;
-    box-shadow:0px 2px 2px #fff;
-    border-radius: 25%;
+    padding: 5px 20px;
+    justify-content: flex-start;
+    align-items: center;
+    border:none;
+    box-shadow:0px 2px 2px #000;
+    border-radius: 10%;
+    grid-template-areas: 
+    "title title title title"
+    "descricao descricao descricao descricao"
+    "descricao descricao descricao descricao"
+    "check editar remover reativar"
+    ;
 }
+
+.todo-container h3{
+    grid-area: title;
+}
+
+.todo-container p{
+    grid-area: descricao;
+}
+
+.check{
+    grid-area: check;
+}
+
+.editar{
+    grid-area: editar;
+}
+
+.reativar{
+    grid-area: reativar;
+}
+
+.remover{
+    grid-area: remover;
+}
+
+.todo-container button {
+    background-color: #707070;
+}
+
 
 .todo-container h3{
     font:bold;
@@ -90,3 +157,13 @@ header{
     text-shadow: 3px 1px 1px black;
 }
 
+.concluida{
+    text-decoration: line-through;
+}
+
+/* footer */ 
+
+footer{
+    position: relative;
+    inset: 10% 40%;
+}

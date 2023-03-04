@@ -14,16 +14,23 @@
     <main>
         <div id="novo-todo-container">
             <h2>Adicionar nova Tarefa</h2>
-            <form>
-                <label>Tarefa a fazer: </label>
-                <input type="text" id="novo-todo">
-                <label>Descrição:</label>
+            
+                <label id="novo-todo-label">Tarefa a fazer: </label>
+                <input type="text" id="novo-todo"> <br>
+                <label id="descricao-label">Descrição:</label>
                 <textarea name="" id="descricao" cols="23" rows="5"></textarea>
                 <button type="submit" id="add-button"><img src="icons/add.png" alt="adicionar"></button>
-            </form>
+                <button type="submit" id="edit-button" hidden><img src="icons/edit.png" alt="edit"></button>
+            
         </div>
             <div id="todos-container">
             </div>
     </main>
 </body>
+<footer>
+    <p>Todo - Mateus Nhoato &copy;</p>
+    <a href="https://github.com/MateusNhoato"><img src="icons/github-logo-6532.svg" alt="github" width="64px" height="64px"></a>
+    <a href="https://www.linkedin.com/in/mateus-nhoato/"><img width="64px" height="64px" src="icons/linkedin-logo-2430.svg" alt="linkedin"></a>
+</footer>
 </html>
+
